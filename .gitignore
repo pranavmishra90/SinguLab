@@ -1,5 +1,2 @@
 *.env
 *.deb
-
-/cuda-test
-/tmp
