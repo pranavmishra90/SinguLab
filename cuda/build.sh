@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Adjust this according to the container name desired
-CONTAINER_NAME="singulab-vscoder-cuda:dev"
+CONTAINER_NAME="singulab-vscoder-cuda:v0.0.31"
 
 
 ##################################################################
@@ -19,7 +19,10 @@ docker build --build-arg CACHE_BUST=$(date +%s) -t $CONTAINER_NAME .
 
 # Add additional tags
 docker tag $CONTAINER_NAME docker.io/pranavmishra90/$CONTAINER_NAME
-docker tag $CONTAINER_NAME gcr.io/pranavmishra90/$CONTAINER_NAME
+docker tag $CONTAINER_NAME docker.io/pranavmishra90/singulab-vscoder-cuda:latest
+
+docker tag $CONTAINER_NAME ghcr.io/pranavmishra90/$CONTAINER_NAME
+docker tag $CONTAINER_NAME ghcr.io/pranavmishra90/singulab-vscoder-cuda:latest
 
 # Calculate the total time
 end_time=$(date +%s)
