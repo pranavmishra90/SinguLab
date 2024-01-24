@@ -1,7 +1,7 @@
 # SinguLab Docker Images
 
 
-You can select from our current recommended image `pranavmishra90/singulab-vscoder-cpu:latest`. It contains a `conda` (`micromamba`) based python environment which follows our fully functional bare metal (non-Docker) environment ([scRNAseq.env environment packages](./library/scRNAseq.yml)).
+You can select from our current recommended image `pranavmishra90/singulab-vscoder-cpu:latest`. It contains a `conda` (`micromamba`) based python environment which follows our fully functional bare metal (non-Docker) environment ([scRNAseq.env environment packages](./library/singulab.yml)).
 
 We are also working on a CUDA enabled docker image which allows for GPU accelerated analysis `pranavmishra90/singulab-vscoder-cpu:dev`
 

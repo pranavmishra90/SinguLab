@@ -105,12 +105,13 @@ SHELL ["/usr/local/bin/_dockerfile_shell.sh"]
 #############################################
 
 COPY --from=code-server /usr/bin/code-server /usr/bin/code-server
+COPY --from=code-server /usr/bin/entrypoint.sh /usr/bin/entrypoint.sh
 COPY --chown=${MAMBA_USER_ID}:${MAMBA_USER_GID} ./* ./home/coder/
 
 ### Stop caching the docker build
 ARG CACHEBUST=1
 
-ENTRYPOINT ["/usr/local/bin/_entrypoint.sh", "/usr/bin/entrypoint.sh", "--bind-addr", "0.0.0.0:8080", "."]
+ENTRYPOINT ["/usr/local/bin/_entrypoint.sh"]
 
 #############################################
 # Build the singulab python env

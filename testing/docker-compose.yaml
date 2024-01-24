@@ -17,13 +17,15 @@ networks:
 services:
   singulab:
 
-    image: docker.io/pranavmishra90/singulab-vscoder:cuda-testing
+    image: docker.io/pranavmishra90/singulab-vscoder-cpu:latest
+    # image: docker.io/pranavmishra90/singulab-vscoder-cuda:dev
+    # image: gcr.io/pranavmishra90/singulab-vscoder:cuda-testing
 
     container_name: SinguLab-VSCoder
 
     ports:
       # SinguLab will be accessible by the browser to the first port listed below
-      - 8088:8080
+      - 8888:8080
 
     volumes:
       # Here we "mount" directories from the host computer into the SinguLab container
