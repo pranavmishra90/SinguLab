@@ -18,6 +18,8 @@ services:
   singulab:
 
     image: docker.io/pranavmishra90/singulab-vscoder-cpu:latest
+    # image: docker.io/pranavmishra90/singulab-vscoder-cuda:dev
+    # image: gcr.io/pranavmishra90/singulab-vscoder:cuda-testing
 
     container_name: SinguLab-VSCoder
 

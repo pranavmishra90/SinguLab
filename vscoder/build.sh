@@ -10,7 +10,7 @@ CONTAINER_NAME="singulab-vscoder-cpu:latest"
 start_time=$(date +%s)
 
 echo "Building the following container:"
-echo "gcr.io/pranavmishra90/$CONTAINER_NAME"
+echo "ghcr.io/pranavmishra90/$CONTAINER_NAME"
 
 # Build the docer container
 export DOCKER_BUILDKIT=1 # use docker buildx caching
