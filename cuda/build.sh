@@ -19,10 +19,10 @@ docker build --build-arg CACHE_BUST=$(date +%s) -t $CONTAINER_NAME .
 
 # Add additional tags
 docker tag $CONTAINER_NAME docker.io/pranavmishra90/$CONTAINER_NAME
-docker tag $CONTAINER_NAME docker.io/pranavmishra90/singulab-vscoder-cuda:latest
+docker tag $CONTAINER_NAME docker.io/pranavmishra90/singulab-vscoder-cuda:dev
 
 docker tag $CONTAINER_NAME ghcr.io/pranavmishra90/$CONTAINER_NAME
-docker tag $CONTAINER_NAME ghcr.io/pranavmishra90/singulab-vscoder-cuda:latest
+docker tag $CONTAINER_NAME ghcr.io/pranavmishra90/singulab-vscoder-cuda:dev
 
 # Calculate the total time
 end_time=$(date +%s)
